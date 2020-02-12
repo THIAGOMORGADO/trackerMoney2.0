@@ -9,11 +9,14 @@ export default class telaPerfil extends Component {
     constructor(props){
         super(props);
         this.state = {
-            nome:'',
-            cep:'',
-            cpf:'',
-            endereco:'',
-            rg:''
+                nome:'',
+                sobrenome:'',
+                cpf:'',
+                rg:'',
+                cep:'',
+                ender:'',
+                email:'',
+                senha:''
         };
         if(firebase.auth().currentUser){
             firebase.database()
@@ -23,10 +26,11 @@ export default class telaPerfil extends Component {
             .then((snapshot) => {
                 let state = this.state;
                 state.nome = snapshot.val().nome;
-                state.cep = snapshot.val().cep;
-                state.cpf = snapshot.val().cpf;
-                state.endereco = snapshot.val().endereco;
-                state.rg = snapshot.val().rg;
+                state.sobrenome = snapshot.val().sobrenome,
+                state.cpf = snapshot.val().cpf,
+                state.rg = snapshot.val().rg,
+                state.cep = snapshot.val().cep,
+                state.ender = snapshot.val().ender,
                 this.setState(state);
             })
         }
@@ -55,10 +59,12 @@ export default class telaPerfil extends Component {
                     <Text style={styles.textoDoPerfil}>Ola,{this.state.nome}</Text>
                 </View>
                 <ScrollView style={styles.history}>
+                    <Text style={styles.textoDoPerfilinfo}>nome: {this.state.nome}</Text>
+                    <Text style={styles.textoDoPerfilinfo}>sobrenome: {this.state.sobrenome}</Text>
                     <Text style={styles.textoDoPerfilinfo}>Cep: {this.state.cep}</Text>
                     <Text style={styles.textoDoPerfilinfo}>Cpf: {this.state.cpf}</Text>
                     <Text style={styles.textoDoPerfilinfo}>rg: {this.state.rg}</Text>
-                    <Text style={styles.textoDoPerfilinfo}>Endereço: {this.state.endereco}</Text>
+                    <Text style={styles.textoDoPerfilinfo}>Endereço: {this.state.ender}</Text>
                  </ScrollView>
                  <TouchableHighlight style={styles.btnAlterar}>
                      <View>
