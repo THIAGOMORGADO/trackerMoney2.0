@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView, StatusBar, View, Text, StyleSheet, Button, TextInput, Image, TouchableOpacity } from 'react-native';
+import { ScrollView, StatusBar, View, Text,  TextInput, Image, TouchableHighlight, ImageBackground  } from 'react-native';
 
-import firebase from '../firebase/firebaseconec';
+import firebase from '../screens/firebaseconec';
 import styles from '../assets/estilo/estilo'
 
 export default class TelaLogin extends Component {
@@ -51,50 +51,43 @@ export default class TelaLogin extends Component {
 
 	render(){
 		return (
-			
-			<ScrollView style={styles.body}>
-				<StatusBar
-				backgroundColor="#000"
-				barStyle="light-content"
-			/>
-				<Text style={styles.TextoLogo}>Tracking Money</Text>
-				<Text style={styles.textoLogo2}>Rastreameto do Seu Dinheiro</Text>
-					<View style={styles.imgArea}>
-						<Image source={require('../assets/logo/logo.jpeg')} style={styles.img}/>
-							<TextInput style={styles.inputName}
-								placeholder="E-mail"  
+			<ImageBackground source={require('../assets/fundo.jpg')} style={styles.bg}>
+				
+				<ScrollView style={styles.body}>
+					<StatusBar
+					backgroundColor="#000"
+					barStyle="light-content"
+				/>
+					<Text style={styles.TextoLogo}>Tracking Money</Text>
+					<Text style={styles.textoLogo2}>Rastreameto do Seu Dinheiro</Text>
+						<View style={styles.imgArea}>
+							<Image source={require('../assets/logo/logo.jpeg')} style={styles.img}/>
+								<TextInput style={styles.inputName}
+									placeholder="E-mail"  
+									placeholderTextColor = "#daa520"
+									onChangeText={(email) => {this.setState({email})}}
+								/>
+								<TextInput style={styles.inputName2}
+								placeholder="Senha"  
+								secureTextEntry={true}
 								placeholderTextColor = "#daa520"
-								onChangeText={(email) => {this.setState({email})}}
-							/>
-							<TextInput style={styles.inputName2}
-							placeholder="Senha"  
-							secureTextEntry={true}
-							placeholderTextColor = "#daa520"
-							onChangeText={(senha) => {this.setState({senha})}}
-							/>
-					</View>
-					<View style={styles.botoes1}>
-						<TouchableOpacity onPress={this.Logar}>
-							<View style={styles.btnL}>
-								<Text style={styles.texto}>Entra</Text>
-							</View>
-						</TouchableOpacity>
-					</View>
-					<View style={styles.botoes2}>
-						<TouchableOpacity onPress={this.esqueceu}>
-							<View style={styles.btnL}>
-								<Text style={styles.texto2}>Esqueci a senha</Text>
-							</View>
-						</TouchableOpacity>
-					</View>
-					<View style={styles.botoes3}>
-						<TouchableOpacity onPress={this.Cadastra}>
-							<View style={styles.btnL}>
-								<Text style={styles.texto}>Cadastro</Text>
-							</View>
-						</TouchableOpacity>
-					</View>
-			</ScrollView>
+								onChangeText={(senha) => {this.setState({senha})}}
+								/>
+						</View>
+						<View style={styles.btnArea}>
+							<TouchableHighlight underlayColor='#eee' onPress={this.Logar} style={styles.btnCadas}>
+								<View style={styles.btnL}>
+									<Text style={styles.texto}>Entra</Text>
+								</View>
+							</TouchableHighlight >
+							<TouchableHighlight underlayColor='#eee' onPress={this.Cadastra} style={styles.btnCadas}>
+								<View style={styles.btnL}>
+									<Text style={styles.texto}>Cadastro</Text>
+								</View>
+							</TouchableHighlight >
+						</View>
+				</ScrollView>
+			</ImageBackground>
 		);
 	}
 }

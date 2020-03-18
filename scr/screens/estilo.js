@@ -88,6 +88,7 @@ const  styles = StyleSheet.create({
 		margin:10,
 		backgroundColor:'#000',
 		marginLeft: 10,
+		
 		borderRadius:50,
 		padding:10,
 		
@@ -115,7 +116,8 @@ const  styles = StyleSheet.create({
 	bodyTelaMenu:{
 		flex:1,
 		marginTop:(Platform.os=='ios')? 20:0,
-		backgroundColor:'#000',
+		backgroundColor:'#000'
+		
 	},
 	icone:{
 		width:20,
@@ -123,47 +125,24 @@ const  styles = StyleSheet.create({
 	},
 	imgPerfil:{
 		borderWidth:1,
-		borderColor:'#daa520',
-		backgroundColor:'#daa520',
-		width:100,
-		height:100,
-		flexDirection:'row',
-		alignSelf:'center',
-		marginTop:10,
-		borderRadius:100
-	},
-	fotosUsuarios:{
-		flexDirection:'row',
-		alignSelf:'center',
-		width:100,
-		height:100,
-		borderRadius:100
-	},
-	textoDoPerfil:{
-		color:'#daa520',
-		flexDirection:'row',
-		alignSelf:'center',
-		marginTop:10,
-		fontWeight:'bold',
-		fontSize:19
-	},
-	history:{
-		margin:10,
-		borderColor:'#daa520',
-		padding:5,
-		borderWidth:1,
-		borderRadius:5,
 		
+		width:160,
+		height:160,
+		flexDirection:'row',
+		alignSelf:'center',
+		marginTop:20,
+		borderRadius:100
 	},
-	textoDoPerfilinfo:{
-		color:'#daa520',
-		marginTop:10,
-		fontWeight:'bold',
-		fontSize:19	
-	},
+
+	
 	btnAlterar:{
-		backgroundColor:'#daa520',
-		margin:10,
+		backgroundColor:"#daa520",
+        margin:10,
+		height:40,
+        width:100,
+        borderRadius:50,
+        alignSelf:'center',
+        justifyContent:'center'
 
 	},
 	textCadastro:{
@@ -201,27 +180,29 @@ const  styles = StyleSheet.create({
 		color:'#daa520'
 	},
 	btnCadasUsuarios:{
-		borderWidth:1,
-		borderColor:'#000',
-		alignSelf:'center',
-		width:300,
-		backgroundColor:'#000',
-		borderRadius:5,
-		marginBottom:10,
-		color:'#daa520'
+		color:'#ff0000'
 	},
 	btntextCadastro:{
 		color:'#daa520',
+		paddingTop:10,
+		width:100,
+		flexDirection:'row',
+		alignSelf:'center',
+		borderRadius:20,
+
 		marginTop:10,
 		textAlign:'center',
-		fontSize:20,
-		fontWeight:'bold',
+		fontSize:19,
 		
-		
+		borderColor:'#daa520',
+		borderWidth:1,
 		paddingBottom:10
 	},
+	
+	
 
-
+	
+	
 
 });
 export default styles;

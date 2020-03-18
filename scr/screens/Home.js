@@ -15,7 +15,8 @@ const tabNavigator = createBottomTabNavigator({
     },
     Cadastro: {
         screen: Cadastro
-	},
+    },
+    
 
 
 },{
@@ -24,7 +25,7 @@ const tabNavigator = createBottomTabNavigator({
         showIcon:true,
         tabBarVisible:false,
         labelStyle:{
-            fontSize:15,
+            fontSize:10,
             fontWeight:'bold'
             
         },

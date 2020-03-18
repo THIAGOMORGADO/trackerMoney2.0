@@ -1,11 +1,8 @@
 import {StyleSheet} from 'react-native'
 const  styles = StyleSheet.create({
-	body:{
-		flexGrow:1,
-		backgroundColor:'#daa520',
-		
-
-	},
+	bg:{
+        flex:1,
+    },
 	TextoLogo:{
 		color:'#000',
 		textAlign:'center',
@@ -30,6 +27,7 @@ const  styles = StyleSheet.create({
 		
 	},
 	img:{
+		marginTop:50,
 		width:150,
 		height:150,
 		borderRadius:100,
@@ -68,52 +66,36 @@ const  styles = StyleSheet.create({
 		fontWeight:'bold',
 		textTransform:"lowercase",	
 	},
-	botoes1:{
-		flex:1,
-		marginTop:10,
-	
-		margin:10,
-		backgroundColor:'#000',
-		marginLeft: 10,
-		borderRadius:50,
-		padding:10,
+	btnArea:{
+		paddingTop:10,
+        paddingBottom:10,
+        
+        flexDirection:'row',
+		justifyContent:'space-evenly',
+		margin:10	
 	},
+	btnCadas:{
+        backgroundColor:"#000",
+        
+        height:40,
+        width:150,
+        borderRadius:50,
+        alignSelf:'center',
+        justifyContent:'center'
+    },
 	texto:{
 		color:'#daa520',
 		textAlign:'center'
-	},
-	botoes2:{
-		
-		alignContent: 'center',
-		marginTop:10,
-	
-		margin:10,
-		backgroundColor:'#000',
-		marginLeft: 10,
-		borderRadius:50,
-		padding:10,
-		
 	},
 	texto2:{
 		color:'#daa520',
 		textAlign:'center'
 	},
-	botoes3:{
-		
-		alignContent: 'center',
-		marginTop:10,
-	
-		margin:10,
-		backgroundColor:'#000',
-		marginLeft: 10,
-		borderRadius:50,
-		padding:10,
-		
-	},
 	texto3:{
 		color:'#daa520',
 		textAlign:'center'
 	},
+	
 	
 
 
